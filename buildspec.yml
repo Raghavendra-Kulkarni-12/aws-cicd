@@ -6,4 +6,11 @@ phases:
       - npm install
   build:
     commands:
+      - echo Build started on `date`
       - npm run build
+  post_build:
+    commands:
+      - echo Build Finished on `date`
+      - zip -qr aws-cicd.zip ./*
+      - ls
+      - aws lambda update-function-code --function-name aws-cicd-fe --zip-file fileb://aws-cicd.zip
