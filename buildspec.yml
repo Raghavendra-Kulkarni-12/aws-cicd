@@ -5,13 +5,9 @@ phases:
     commands:
       - apt-get update
       - apt-get install -y zip unzip
-  pre_build:
-    commands:
-      - npm install
   build:
     commands:
       - echo Build started on `date`
-      - npm run build
   post_build:
     commands:
       - echo Build Finished on `date`
