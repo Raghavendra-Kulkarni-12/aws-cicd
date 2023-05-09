@@ -1,10 +1,12 @@
 version: 0.2
 
 phases:
-  build:
+  install:
     commands:
       - apt-get update
       - apt-get install -y zip unzip
+  build:
+    commands:
       - echo Build started on `date`
   post_build:
     commands:
