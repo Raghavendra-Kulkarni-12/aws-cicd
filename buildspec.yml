@@ -31,4 +31,4 @@ phases:
     commands:
       - echo Build finished on `date`
       - zip -qr aws-cicd.zip ./*
-      - aws lambda update-function-code --function-name aws-cicd-fe --zip-file fileb://aws-cicd.zip
+      - aws lambda update-function-code --function-name aws-cicd-fe --zip-file fileb://aws-cicd.zip || true
