@@ -1,6 +1,10 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - apt-get update
+      - apt-get install -y zip unzip
   pre_build:
     commands:
       - npm install
